@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-contract Transaction {
+contract Transactions {
     uint256 transactionCount;
 
     // Declaring the transfering event
