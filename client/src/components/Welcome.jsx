@@ -1,15 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
+
+import { TransactionContext} from "../context/TransactionContext"
 
 
 import {Loader} from './'
 
 const Welcome = () => {
-  const connectWallet = () => {
-
-  }
+  const { connectWallet, currentAccount } = useContext(TransactionContext)
+  // console.log(value)
 
   const handleSubmit = () => {
 
@@ -38,13 +39,15 @@ const Welcome = () => {
           <p className="text-white text-left font-light md:w-9/12 w-11/12 py-4 text-lg">
             Explore the crypo world. Buy and Sell crypto on Kryptoz easiy!
           </p>
-          <button 
+
+
+          {!currentAccount && (<button 
             type="button"
             onClick={connectWallet}
             className="flex flex-row justify-center text-lg text-white items-center my-5 bg-indigo-900 cursor-pointer font-semibold hover:bg-slate-100 hover:text-indigo-800 p-3 rounded-full"
           >
           Connect your wallet now
-          </button>
+          </button>)}
 
           <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
             <div className={`rounded-tl-2xl ${commonStyles}`}>
