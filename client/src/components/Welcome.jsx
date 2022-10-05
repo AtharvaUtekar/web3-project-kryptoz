@@ -1,5 +1,4 @@
 import React, {useContext} from 'react'
-import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 import { shortenAddress } from '../utils/shortenAddress';
@@ -22,7 +21,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 
 const Welcome = () => {
 
-  const { currentAccount, connectWallet, handleChange, sendTransaction, formData } = useContext(TransactionContext);
+  const { currentAccount, connectWallet, handleChange, sendTransaction, formData, isLoading } = useContext(TransactionContext);
   // console.log(value)
 
   const handleSubmit = (e) => {
@@ -111,7 +110,7 @@ const Welcome = () => {
             <div className="h-[1px] w-full bg-gray-400 my-2" />
 
             { 
-              false ? (
+              isLoading ? (
                 <Loader />
                 ) 
               : 
