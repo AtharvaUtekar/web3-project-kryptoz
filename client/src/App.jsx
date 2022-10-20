@@ -5,9 +5,9 @@ import { Navbar, Footer, Services, Welcome, Transactions } from './components'
 const App = () => {
   return (
     <div>
-      <div className="min h-screen">
+      <div className="min h-screen overflow-x-hidden">
           <div className="gradient-bg-welcome">
-            <Navbar />
+            <Navbar />            
             <Welcome />
           </div>
           <Services />

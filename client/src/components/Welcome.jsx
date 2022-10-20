@@ -5,6 +5,7 @@ import { shortenAddress } from '../utils/shortenAddress';
 import { TransactionContext} from "../context/TransactionContext"
 import {Loader} from './'
 
+
 const commonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 font-thin text-md text-white";
 
 
@@ -38,6 +39,7 @@ const Welcome = () => {
     <div className="flex w-full justify-center items-center">
       <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
         <div className="flex flex-1 justify-start flex-col mf:mr-10">
+
           <h1 className="text-white text-3xl sm:text-4xl text-gradient py-2 font-semibold">
             Send Crypto <br/> Across the world, Anytime, Anywhere !
           </h1>
@@ -124,6 +126,8 @@ const Welcome = () => {
           </div>
 
         </div>
+
+
       </div>
     </div>
   )
