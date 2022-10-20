@@ -31,9 +31,16 @@ const Navbar = () => {
           <img src={logo} className="w-[14rem] p-2 cursor-pointer" alt="kryptoz"/>
         </div>
         <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-          {["Exchange","Wallets","News"].map((item,index)=>(
-              <NavbarItem key={index+item} title={item}/>
-          ))}
+
+          <a href="https://coinmarketcap.com/">
+          <NavbarItem key={0} title={"Exchanges"}/>
+          </a>
+          <a href="https://www.binance.com/en">
+          <NavbarItem key={1} title={"Wallet"}/>
+          </a>
+          <a href="https://cryptonews.com/">
+          <NavbarItem key={2} title={"News"}/>
+          </a>
           <li onClick={connectWallet} className=" bg-white text-lg text-indigo-900 py-2 px-8 m-3 mx-4 rounded-full cursor-pointer font-bold hover:bg-slate-100 hover:text-indigo-800">
             Login
           </li>

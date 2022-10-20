@@ -24,7 +24,7 @@ const ServiceCard = ({ color, title, icon, subtitle }) => (
 
 const Services = () => (
   <div className="flex w-full justify-center items-center gradient-bg-services">
-    <div className="flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4">
+    <div className="flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 p-4">
 
 
       <div className="flex-1 flex flex-col justify-center items-center m-4">
@@ -32,18 +32,120 @@ const Services = () => (
         <a href="https://coinmarketcap.com/">
         <button           
           type="button"
-          className="text-white flex-row w-full m-10 border-none p-2 text-2xl rounded-full cursor-pointer">
-            Go to the Exchange Market Market Overview →      
+          className="text-white flex-row w-full border-none p-6 text-2xl rounded-full cursor-pointer">
+          Go to the Exchange Market Market Overview →      
         </button>
 
         </a>
 
 
-        <MarketOverview className="" widgetProps={{"theme": "dark"}} />
+        <MarketOverview className="w-full" widgetPropsAny={{"colorTheme": "dark",
+    "tabs": [
+      {
+        "title": "Crypto Currencies",
+        "symbols": [
+          {
+            "s": "BINANCE:ETHUSDT",
+            "d": "Ethereum"
+          },
+          {
+            "s": "BINANCE:ADAUSDT",
+            "d": "Cardano"
+          },
+          {
+            "s": "BINANCE:DOGEUSDT",
+            "d": "Dogecoin"
+          },
+          {
+            "s": "BITSTAMP:BTCUSD",
+            "d": "Bitcoin"
+          },
+          {
+            "s": "BINANCE:SUSHIUSDT",
+            "d": "Sushi"
+          },
+          {
+            "s": "BINANCE:APTUSDT",
+            "d": "APT"
+          },
+          {
+            "s": "BINANCE:AVAXUSDT",
+            "d": "AVAX"
+          },
+          {
+            "s": "BINANCE:EOSUSDT",
+            "d": "EOS"
+          },
+          {
+            "s": "BINANCE:ATOMUSDT",
+            "d": "Cosmos"
+          },
+          {
+            "s": "BINANCE:SOLUSDT",
+            "d": "Solana"
+          },
+          {
+            "s": "BINANCE:XRPUSDT",
+            "d": "XRP"
+          },
+          {
+            "s": "BINANCE:AAVEUSDT",
+            "d": "AAVE"
+          },
+          {
+            "s": "BINANCE:MATICUSDT",
+            "d": "Matic"
+          },
+          {
+            "s": "BINANCE:LINKUSDT",
+            "d": "Chainlink"
+          },
+          {
+            "s": "BINANCE:LUNAUSDT",
+            "d": "Luna"
+          },
+          {
+            "s": "BINANCE:GALAUSDT",
+            "d": "Gala"
+          },
+          {
+            "s": "BINANCE:RUNEUSDT",
+            "d": "Rune"
+          }
+        ]
+      },
+      {
+        "title": "Indices",
+        "symbols": [
+          {
+            "s": "BSE:SENSEX",
+            "d": "Sensex"
+          },
+          {
+            "s": "NASDAQ:NDX",
+            "d": "NDX"
+          },
+          {
+            "s": "OANDA:SG30SGD",
+            "d": "SG30"
+          },
+          {
+            "s": "OANDA:HK33HKD",
+            "d": "HKD"
+          },
+          {
+            "s": "VANTAGE:DAX40",
+            "d": "DAX"
+          }
+        ],
+        "originalTitle": "Indices"
+      }
+    ]
+
+
+        }} />
 
       </div>
-      
-      
       
       {/*
       <div className="m-5">
@@ -51,12 +153,7 @@ const Services = () => (
       </div> */}
 
 
-         
-
-
-
-
-      <div className="flex-1 m-2 flex flex-col justify-start items-center">
+      <div className="flex-1 m-2 p-6 flex flex-col justify-start items-center">
         <h1 className="text-white text-3xl sm:text-5xl py-4 text-gradient ">
           Services that we
           <br />
@@ -86,6 +183,8 @@ const Services = () => (
           subtitle="Security is guranteed. We always maintain privacy and maintain the quality of our products"
         />
       </div>
+
+      
     </div>
   </div>
 );
