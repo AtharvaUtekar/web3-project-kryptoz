@@ -5,6 +5,12 @@ import { TransactionContext} from "../context/TransactionContext"
 
 import logo from '../../images/logo.png'
 
+// New
+import { TickerTape } from "react-tradingview-embed";
+<TickerTape widgetProps={{"theme": "dark"}} />
+
+
+
 const NavbarItem = ({title, classProps}) => {
   return (
     <li className={`mx-4 curcor-pointer ${classProps}`}>
@@ -17,6 +23,7 @@ const Navbar = () => {
 
   const [toggleMenu, setToggleMenu ] = useState(false);
   const { connectWallet } = useContext(TransactionContext);
+  
 
   return (
     <nav className="w-full flex md:justify-center font-semibold justify-between items-center p-4">
@@ -50,6 +57,13 @@ const Navbar = () => {
             </ul>
           }
       </div>
+
+
+      
+
+        
+
+      
     </nav>
   )
 }
