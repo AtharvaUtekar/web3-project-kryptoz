@@ -1,4 +1,4 @@
-## https://web3-kryptoz.netlify.app/
+## https://kryptozweb3.netlify.app
 
 
 ### Web3 Project for cryptocurrency transactions 
