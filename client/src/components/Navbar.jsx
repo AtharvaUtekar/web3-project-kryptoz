@@ -2,15 +2,14 @@ import React, {useState, useContext } from 'react'
 import { HiOutlineMenu } from "react-icons/hi"
 import { AiOutlineClose } from "react-icons/ai"
 import { TransactionContext} from "../context/TransactionContext"
-import { TickerTape } from "react-tradingview-embed";
-// import { TickerTape } from "./TickerTape" 
+
 import logo from '../../src/utils/KryptozLogo.png'
 
 
 
 const NavbarItem = ({title, classProps}) => {
   return (
-    <li className={`mx-4 curcor-pointer ${classProps}`}>
+    <li className={`mx-4 cursor-pointer ${classProps}`}>
       {title}
     </li>
   )
@@ -32,7 +31,7 @@ const Navbar = () => {
           <img src={logo} className="w-[14rem] p-2 cursor-pointer" alt="kryptoz"/>
         </div>
         <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-          {["Market","Exchange","Wallets","News"].map((item,index)=>(
+          {["Exchange","Wallets","News"].map((item,index)=>(
               <NavbarItem key={index+item} title={item}/>
           ))}
           <li onClick={connectWallet} className=" bg-white text-lg text-indigo-900 py-2 px-8 m-3 mx-4 rounded-full cursor-pointer font-bold hover:bg-slate-100 hover:text-indigo-800">
@@ -60,49 +59,6 @@ const Navbar = () => {
             }
         </div>    
 
-      </div>
-
-      <div className="flex-row flex w-full font-semibold items-start ml-[12.5%]">
-        <TickerTape widgetProps={{
-    "theme": "dark", 
-    "symbols": [
-    {
-      "proName": "FOREXCOM:NSXUSD",
-      "title": "US 100"
-    },
-    {
-      "proName": "BITSTAMP:BTCUSD",
-      "title": "Bitcoin"
-    },
-    {
-      "proName": "BITSTAMP:ETHUSD",
-      "title": "Ethereum"
-    },
-    {
-      "description": "Bitcoin USD",
-      "proName": "BITSTAMP:BTCUSD"
-    },
-    {
-      "description": "Solana",
-      "proName": "BINANCE:SOLUSDT"
-    },
-    {
-      "description": "XPR",
-      "proName": "BINANCE:XRPUSDT"
-    },
-    {
-      "description": "Matic",
-      "proName": "BINANCE:MATICUSDT"
-    },
-    {
-      "description": "Shiba coin",
-      "proName": "BINANCE:SHIBUSDT"
-    },
-    {
-      "description": "Cardano",
-      "proName": "BINANCE:ADAUSDT"
-    }],
-    "transparent": "true", }} />
       </div>
 
     </nav>
